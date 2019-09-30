@@ -1,7 +1,6 @@
-class Order < ApplicationRecord
+class OrdersController < ApplicationController
 
-	belongs_to :user
-	belongs_to :product
+	before_action :authenticate_user!
 
 	def new
 		@order = Order.new
@@ -17,4 +16,5 @@ class Order < ApplicationRecord
 	def order_params
 		params.require(:order).permit(:user_id, :product_id, :completed)
 	end
+
 end
