@@ -1,6 +1,11 @@
 class ProductsController < ApplicationController
 
-	before_action :authenticate_user!
+	# before_action :authenticate_user!
+
+	def index
+		products = Product.all #need to eventually restrict this to only return products owned by current user
+		render json: products
+	end
 
 	def new
 		@product = Product.new
