@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  scope '/api/v1' do
-    resources :products
+  namespace :v1, defaults: { format: 'json' } do
+  	get 'products', to: 'products#index'
   end
 
 end
