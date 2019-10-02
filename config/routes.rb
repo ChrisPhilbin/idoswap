@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'static#index'
 
-  namespace :v1, defaults: { format: 'json' } do
+  namespace :v1 do
   	get 'products', to: 'products#index'
   end
 
