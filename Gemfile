@@ -6,6 +6,7 @@ gem 'devise', '~> 4.2'
 gem 'pry'
 gem 'webpacker'
 gem 'react-rails'
+gem 'foreman', '~> 0.82.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
