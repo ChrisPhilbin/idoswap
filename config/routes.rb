@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'static#index'
 
-  namespace :v1 do
+  namespace :api do
   	get 'products', to: 'products#index'
   end
 
