@@ -3,8 +3,13 @@ class V1::ProductsController < ApplicationController
 	# before_action :authenticate_user!
 
 	def index
-		products = Product.all #need to eventually restrict this to only return products owned by current user
-		render json: products
+		q = params[:q]
+
+		if q.blank?
+			render status: 400, json: { error: 'Expected parameter `q` '}
+		else
+			render(status: 200, json: Product.where(["description LIKE ?", "%#{q}%"]).limit(100))
+		end
 	end
 
 	def new
