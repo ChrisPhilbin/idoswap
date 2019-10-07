@@ -43,24 +43,23 @@ class productSearch extends React.Component {
 		));
 
 		return (
-			<table>
-				<tr>
-					<td>
-						<input
-						className='prompt'
-						type='text'
-						placeholder='Search products...'
-						value={this.state.searchValue}
-						onChange={this.handleSearchChange}
-						/>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						{productRows}
-					</td>
-				</tr>
-			</table>
+			<div id="product-search">
+				<table>
+					<tr>
+						<td>
+							<h3>Input search below</h3>
+							<input
+							className='prompt'
+							type='text'
+							placeholder='Search products...'
+							value={this.state.searchValue}
+							onChange={this.handleSearchChange}
+							/>
+						</td>
+					</tr>
+					{productRows}
+				</table>
+			</div>
 		)
 	}
 }

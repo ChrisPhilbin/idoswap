@@ -23,5 +23,5 @@ function parseJSON(response) {
   return response.json();
 }
 
-const searchProducts = { search };
-export default searchProducts;
+const searchClient = { search };
+export default searchClient;
