@@ -31,6 +31,16 @@ class productSearchForm extends React.Component {
 	};
 
 	render() {
+
+		const productRows = products.map((product, idx) => (
+			<tr key={idx}>
+				<td>
+					<b>{product.name}</b><br />
+					{product.description}
+				</td>
+			</tr>
+		));
+
 		return (
 			<form>
 				<input
@@ -41,6 +51,9 @@ class productSearchForm extends React.Component {
 				onChange={this.handleSearchChange}
 				/>
 			</form>
+			<table>
+				{productRows}
+			</table>
 		)
 	}
 }
