@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { searchProducts } from './searchClient'
 
 function App() {
   return (
