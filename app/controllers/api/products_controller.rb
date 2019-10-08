@@ -19,6 +19,7 @@ class Api::ProductsController < ApplicationController
 	def create
 		@product = Product.new(product_params)
 		@product.save
+		render json: @product
 	end
 
 	private

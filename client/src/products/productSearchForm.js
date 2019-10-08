@@ -34,32 +34,26 @@ class productSearch extends React.Component {
 
 		const { products } = this.state;
 		const productRows = products.map((product, idx) => (
-			<tr key={idx}>
-				<td>
-					<b>{product.name.substring(0, 20)}</b><br />
-					{product.description.substring(0, 40)}
-				</td>
-			</tr>
+			<div id={idx}>
+				<b>{product.name.substring(0, 20)}</b><br />
+				{product.description.substring(0, 40)}
+			</div>
 		));
 
 		return (
-			<div id="product-search">
-				<table>
-					<tbody>
-					<tr>
-						<td>
-							<input
-							class='form-control'
-							type='text'
-							placeholder='Search products...'
-							value={this.state.searchValue}
-							onChange={this.handleSearchChange}
-							/>
-						</td>
-					</tr>
-					{productRows}
-					</tbody>
-				</table>
+			<div>
+				<div id="row justify-content-md-center">
+					<input
+					class='form-control'
+					type='text'
+					size='40'
+					placeholder='Search products...'
+					value={this.state.searchValue}
+					onChange={this.handleSearchChange}
+					/>
+				</div>
+
+				{productRows}
 			</div>
 		)
 	}

@@ -8,7 +8,7 @@ function App() {
   		<NavBar />
 	    <div class="jumbotron">
 	      <h1>I Do Swap</h1>
-	      <p>Helping brides and grooms sell and resell great wedding decor at great prices</p>
+	      <p>Helping brides and grooms buy and resell great wedding decor at great prices</p>
 	    </div>
 
 	    <div class="container">
