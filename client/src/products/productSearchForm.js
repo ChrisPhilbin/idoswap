@@ -36,8 +36,8 @@ class productSearch extends React.Component {
 		const productRows = products.map((product, idx) => (
 			<tr key={idx}>
 				<td>
-					<b>{product.name}</b><br />
-					{product.description}
+					<b>{product.name.substring(0, 20)}</b><br />
+					{product.description.substring(0, 40)}
 				</td>
 			</tr>
 		));
