@@ -45,6 +45,7 @@ class productSearch extends React.Component {
 		return (
 			<div id="product-search">
 				<table>
+					<tbody>
 					<tr>
 						<td>
 							<h3>Input search below</h3>
@@ -58,6 +59,7 @@ class productSearch extends React.Component {
 						</td>
 					</tr>
 					{productRows}
+					</tbody>
 				</table>
 			</div>
 		)
