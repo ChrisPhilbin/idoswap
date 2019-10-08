@@ -3,11 +3,16 @@ import ProductSearch from './products/productSearchForm'
 
 function App() {
   return (
-    <div class="container">
-      <h1>Hello, world!</h1>
+  	<div>
+	    <div class="jumbotron">
+	      <h1>I Do Swap</h1>
+	      <p>Helping brides and grooms sell and resell great wedding decor at great prices</p>
+	    </div>
 
-      <ProductSearch />
-    </div>
+	    <div class="container">
+			<ProductSearch />
+		</div>
+	</div>
   );
 }
 

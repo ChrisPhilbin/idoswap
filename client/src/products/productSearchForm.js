@@ -48,9 +48,8 @@ class productSearch extends React.Component {
 					<tbody>
 					<tr>
 						<td>
-							<h3>Input search below</h3>
 							<input
-							className='prompt'
+							class='form-control'
 							type='text'
 							placeholder='Search products...'
 							value={this.state.searchValue}
