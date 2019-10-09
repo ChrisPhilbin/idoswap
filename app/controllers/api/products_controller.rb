@@ -13,13 +13,23 @@ class Api::ProductsController < ApplicationController
 	end
 
 	def new
-		@product = Product.new
+		product = Product.new
+	end
+
+	def destroy
+		Product.destroy(params[:id])
 	end
 
 	def create
-		@product = Product.new(product_params)
-		@product.save
-		render json: @product
+		product = Product.new(product_params)
+		product.save
+		render json: product
+	end
+
+	def update
+		product = Product.find(params[:id])
+		product.update_attributes(product_params)
+		render json: product
 	end
 
 	private
