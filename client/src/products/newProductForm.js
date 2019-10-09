@@ -1,4 +1,5 @@
 import React, { Component }  from 'react';
+import NewProductClient from './newProductClient'
 
 const NewProduct = (props) => {
 
@@ -7,7 +8,9 @@ const NewProduct = (props) => {
 	return(
 
 		<form onSubmit={ (e) => {
-			props.handleFormSubmit(formFields.name.value, formFields.description.value, formFields.price.value);
+			e.preventDefault();
+			props.handleFormSubmit(formFields.name.value, formFields.description.value, formFields.price.value,
+				formFields.user_id.value);
 			e.target.reset();
 		}}>
 
@@ -22,7 +25,12 @@ const NewProduct = (props) => {
 	        <div class="form-group">
 				<input class="form-control" ref={input => formFields.price = input} placeholder='Enter a price' />
 			</div>
-	        <button>Submit</button>
+
+			<div class="form-group">
+	        	<input class="form-control" ref={input => formFields.user_id = input} placeholder='Enter user id'/>
+	        </div>
+
+	        <button class="btn btn-primary">Submit</button>
       	</form>
 	)
 }

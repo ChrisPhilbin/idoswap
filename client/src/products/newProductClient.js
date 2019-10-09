@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-class NewProduct extends React.Component {
+class NewProductClient extends React.Component {
 
 	handleFormSubmit(name, description, price){
 		let body = JSON.stringify({product: {name: name, description: description, price: price} })
