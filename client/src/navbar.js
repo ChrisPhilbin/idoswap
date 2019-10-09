@@ -15,16 +15,16 @@ class NavBar extends Component {
 			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">Categories</a>
+			        <a class="nav-link" href="#">List a product</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">Categories</a>
+			        <a class="nav-link" href="#">Browse Categories</a>
 			      </li>
 			      <li class="nav-item">
 			        <a class="nav-link" href="#">About</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">Login</a>
+			        <a class="nav-link disabled" href="#">Login</a>
 			      </li>
 			    </ul>
 			  </div>
