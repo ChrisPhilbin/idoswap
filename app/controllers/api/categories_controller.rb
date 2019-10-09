@@ -2,7 +2,11 @@ class Api::CategoriesController < ApplicationController
 
 	def index
 		categories = Category.all
-		render json: categories
+		if categories.blank?
+			render status: 400, json: { error: 'Something went wrong. Try again '}
+		else
+			render(status: 200, json: categories)
+		end
 	end
 
 	def new
