@@ -1,3 +1,5 @@
+//container component responsible for POSTing new product items to the rails backend
+
 import React from 'react'
 
 class NewProduct extends React.Component {
@@ -18,4 +20,4 @@ class NewProduct extends React.Component {
 	}
 }
 
-export default NewProduct
+export default NewProductClient

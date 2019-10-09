@@ -1,7 +1,7 @@
 .jumbotron {
   background-image: url("./img/background.jpg");
   background-size: cover;
-  min-height: 270px;
+  min-height: 250px;
   color: #ffffff;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
