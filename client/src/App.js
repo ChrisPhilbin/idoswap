@@ -24,14 +24,16 @@ class App extends Component {
 			</div>
 		</div>
 	  );
-  }
+  };
 
-  const mapStateToProps = (state) => {
+}
+
+const mapStateToProps = (state) => {
   	return ({
   		products: state.products,
   		loading: state.loading
   	})
-  }
 }
+
 
 export default connect(mapStateToProps, getProducts)(App);
