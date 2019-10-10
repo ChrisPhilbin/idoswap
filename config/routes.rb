@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   namespace :api do
   	get 'products', to: 'products#index'
+  	get 'products/all', to: 'products#all'
   	get 'categories', to: 'categories#index'
   end
 

@@ -12,6 +12,11 @@ class Api::ProductsController < ApplicationController
 		end
 	end
 
+	def all
+		products = Product.all.take(30)
+		render json: products
+	end
+
 	def new
 		product = Product.new
 	end
