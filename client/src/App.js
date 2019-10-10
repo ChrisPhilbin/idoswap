@@ -25,6 +25,13 @@ class App extends Component {
 		</div>
 	  );
   }
+
+  const mapStateToProps = (state) => {
+  	return ({
+  		products: state.products,
+  		loading: state.loading
+  	})
+  }
 }
 
 export default connect(mapStateToProps, getProducts)(App);
