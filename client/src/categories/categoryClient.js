@@ -1,6 +1,6 @@
 //container component that hits the rails API and returns a list of all categories
 
-function listCategories(cb) {
+function getCategories(cb) {
   return fetch(`api/categories`, {
     accept: 'application/json',
   }).then(checkStatus)
@@ -22,5 +22,5 @@ function parseJSON(response) {
   return response.json();
 }
 
-const categoriesClient = { listCategories };
+const categoriesClient = { getCategories };
 export default categoriesClient;
