@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import NavBar from './navbar'
-import getProducts from './products/getProducts'
+import { getProducts } from './actions/productActions'
 import ProductSearch from './products/productSearchForm'
 
 class App extends Component {
@@ -29,11 +29,12 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
+	console.log(state)
   	return ({
-  		products: state.products,
-  		loading: state.loading
+  		products: state.productsReducer.products,
+  		loading: state.productsReducer.loading
   	})
 }
 
 
-export default connect(mapStateToProps, getProducts)(App);
+export default connect(mapStateToProps, { getProducts })(App);

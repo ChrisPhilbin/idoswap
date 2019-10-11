@@ -1,4 +1,4 @@
-const getProducts = () => {
+export const getProducts = () => {
 	return dispatch => {
 		dispatch({type: 'LOADING_PRODUCTS'})
 		return (
@@ -8,5 +8,3 @@ const getProducts = () => {
 		)
 	}
 }
-
-export default getProducts

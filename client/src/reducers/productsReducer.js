@@ -6,6 +6,12 @@ const productsReducer = (state = { products: [], loading: false}, action) => {
 				...state,
 				loading: true
 		}
+		case 'LOADED_PRODUCTS':
+			return {
+				...state,
+				products: state.products.concat(action.payload),
+				loading: false
+			}
 		default:
 			return state
 	}
