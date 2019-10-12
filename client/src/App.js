@@ -5,10 +5,12 @@ import { getProducts } from './actions/productActions'
 import { getCategories } from './actions/categoryActions'
 import ProductSearch from './components/products/ProductSearchForm'
 import ProductList from './components/products/ProductList'
+import CategoryList from './components/categories/CategoryList'
 class App extends Component {
 
 	componentDidMount() {
 		this.props.getProducts()
+		this.props.getCategories()
 	}
 
   render() {
@@ -31,6 +33,10 @@ class App extends Component {
 					</div>
 
 					<div class="row">
+						<CategoryList />
+					</div>
+
+					<div class="row">
 						<ProductList />
 					</div>
 				</div>
@@ -42,10 +48,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  	return ({
-  		products: state.productsReducer.products,
-  		loading: state.productsReducer.loading
-  	})
+  	return state
 }
 
-export default connect(mapStateToProps, { getProducts })(App);
+export default connect(mapStateToProps, { getProducts, getCategories })(App);
