@@ -1,18 +1,20 @@
-import React from 'react';
-import CategoriesClient from './CategoryClient';
+import React from 'react'
+import { connect } from 'react-redux'
+import CategoryListItem from './CategoryListItem'
 
-class CategoryList extends React.Component {
+const CategoryList = (props) => (
+	<div>
+		{props.categories.map((category) => {
+			return <CategoryListItem key={category.id} {...category}/>
+		})}
+	</div>
+)
 
-	state = {
-		categories: []
-	}
-
-	handleListCategories = () => {
-		categoriesClient.getCategories(value, (categories) =>
-			this.setState({
-				categories: categories
-			})
-	)}
+const mapStateToProps = (state) => {
+  	return ({
+  		categories: state.categoriesReducer.categories,
+  		loading: state.categoriesReducer.loading
+  	})
 }
 
-export default CategoryList
+export default connect(mapStateToProps)(CategoryList)
