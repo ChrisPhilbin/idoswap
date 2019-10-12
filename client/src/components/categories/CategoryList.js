@@ -1,7 +1,7 @@
 import React from 'react';
-import categoriesClient from './categoryClient';
+import CategoriesClient from './CategoryClient';
 
-class listCategories extends React.Component {
+class CategoryList extends React.Component {
 
 	state = {
 		categories: []
@@ -15,4 +15,4 @@ class listCategories extends React.Component {
 	)}
 }
 
-export default listCategories
+export default CategoryList

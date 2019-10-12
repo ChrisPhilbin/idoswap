@@ -22,5 +22,5 @@ function parseJSON(response) {
   return response.json();
 }
 
-const categoriesClient = { getCategories };
-export default categoriesClient;
+const CategoriesClient = { getCategories };
+export default CategoriesClient;
