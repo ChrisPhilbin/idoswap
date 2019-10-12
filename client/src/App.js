@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import NavBar from './navbar'
+import NavBar from './components/NavBar'
 import { getProducts } from './actions/productActions'
-import ProductSearch from './products/productSearchForm'
+import ProductSearch from './components/products/ProductSearchForm'
+// import displayProducts from './components/products/displayProducts'
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
 
 				<div class="row">
 					<h3><b>Most recent products...</b></h3>
+
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import searchClient from './searchClient';
+import searchClient from './SearchClient';
 
 const MATCHING_ITEM_LIMIT = 25;
 

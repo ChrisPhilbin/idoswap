@@ -1,4 +1,6 @@
-export const displayProducts = () => {
+import React from 'react'
+
+const displayProducts = () => {
 
 	return(
 		{products.map(product => (
@@ -9,3 +11,5 @@ export const displayProducts = () => {
 	)
 
 }
+
+export default displayProducts
