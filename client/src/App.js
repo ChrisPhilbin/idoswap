@@ -20,7 +20,13 @@ class App extends Component {
 		    </div>
 
 		    <div class="container">
-				<ProductSearch />
+		    	<div class="row">
+					<ProductSearch />
+				</div>
+
+				<div class="row">
+					<h3><b>Most recent products...</b></h3>
+				</div>
 			</div>
 		</div>
 	  );
@@ -29,7 +35,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-	console.log(state)
+	//console.log(state)
   	return ({
   		products: state.productsReducer.products,
   		loading: state.productsReducer.loading
