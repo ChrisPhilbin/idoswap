@@ -24,9 +24,14 @@ class App extends Component {
 					<ProductSearch />
 				</div>
 
-				<div class="row">
-					<h3><b>Most recent products...</b></h3>
-					<ProductList />
+				<div class="container">
+					<div class="row">
+						<h3><b>Most recent products...</b></h3>
+					</div>
+
+					<div class="row">
+						<ProductList />
+					</div>
 				</div>
 			</div>
 		</div>
