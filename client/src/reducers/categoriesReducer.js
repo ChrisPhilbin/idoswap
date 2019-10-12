@@ -6,6 +6,12 @@ const categoriesReducer = (state = { categories: [], loading: false}, action) =>
 				...state,
 				loading: true
 		}
+		case 'LOADED_CATEGORIES':
+			return {
+				...state,
+				categories: state.categories.concat(action.payload),
+				loading: false
+			}
 		default:
 			return state
 	}

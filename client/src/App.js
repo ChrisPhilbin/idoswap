@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import NavBar from './components/NavBar'
 import { getProducts } from './actions/productActions'
+import { getCategories } from './actions/categoryActions'
 import ProductSearch from './components/products/ProductSearchForm'
 import ProductList from './components/products/ProductList'
 class App extends Component {
@@ -40,15 +41,11 @@ class App extends Component {
 
 }
 
-// export default App
-
 const mapStateToProps = (state) => {
-	//console.log(state)
   	return ({
   		products: state.productsReducer.products,
   		loading: state.productsReducer.loading
   	})
 }
-
 
 export default connect(mapStateToProps, { getProducts })(App);
