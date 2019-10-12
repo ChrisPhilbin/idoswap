@@ -15,7 +15,7 @@ class NavBar extends Component {
 			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">List a product</a>
+			        <a class="nav-link" href="#">Sell a product</a>
 			      </li>
 			      <li class="nav-item">
 			        <a class="nav-link" href="#">Browse Categories</a>
