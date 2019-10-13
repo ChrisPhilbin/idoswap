@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import NavBar from './components/NavBar'
 import { getProducts } from './actions/productActions'
 import { getCategories } from './actions/categoryActions'
+import IntroHeader from './components/IntroHeader'
 import ProductSearch from './components/products/ProductSearchForm'
 import ProductList from './components/products/ProductList'
 import CategoryList from './components/categories/CategoryList'
@@ -17,11 +18,9 @@ class App extends Component {
 	  return (
 	  	<div>
 	  		<NavBar />
-		    <div class="jumbotron">
-		      <h1>I Do Swap</h1>
-		      <p>Helping brides and grooms buy and resell great wedding decor at great prices</p>
-		    </div>
-
+	  		<div class="container">
+	  			<IntroHeader />
+	  		</div>
 		    <div class="container">
 		    	<div class="row">
 					<ProductSearch />
