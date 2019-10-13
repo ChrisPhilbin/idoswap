@@ -14,7 +14,7 @@ const NavBar = () => (
 	        <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
 	      </li>
 	      <li className="nav-item">
-	        <a className="nav-link" href="/products/new">Sell a product</a>
+	        <NavLink to ="/products/new" className="nav-link">Sell a product</NavLink>
 	      </li>
 	      <li className="nav-item">
 	      	<NavLink to="/categories" className="nav-link">Browse Categories</NavLink>

@@ -3,8 +3,9 @@ import CategoryList from './CategoryList'
 
 const CategoryListPage = () => (
 
-	<CategoryList />
-
+	<div>
+		<CategoryList />
+	</div>
 )
 
 export default CategoryListPage

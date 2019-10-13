@@ -1,15 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
-class IntroHeader extends Component {
-
-	render() {
-		return(
-			<div className="jumbotron">
-		      <h1>I Do Swap</h1>
-		      <p>Helping brides and grooms buy and resell great wedding decor at great prices</p>
-		    </div>
-		)
-	}
-}
+const IntroHeader = () => (
+	<div className="jumbotron">
+		<h1>I Do Swap</h1>
+		<p>Helping brides and grooms buy and resell great wedding decor at great prices</p>
+	</div>
+)
 
 export default IntroHeader
