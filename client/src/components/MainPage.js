@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import NavBar from './NavBar'
 import { getProducts } from '../actions/productActions'
 import { getCategories } from '../actions/categoryActions'
 import IntroHeader from './IntroHeader'
@@ -17,20 +16,20 @@ class MainPage extends Component {
   render() {
 	  return (
 	  	<div>
-	  		<div class="container">
+	  		<div className="container">
 	  			<IntroHeader />
 	  		</div>
-		    <div class="container">
-		    	<div class="row">
+		    <div className="container">
+		    	<div className="row">
 					<ProductSearch />
 				</div>
 
-				<div class="container">
-					<div class="row">
+				<div className="container">
+					<div className="row">
 						<CategoryList />
 					</div>
 
-					<div class="row">
+					<div className="row">
 						<ProductList />
 					</div>
 				</div>

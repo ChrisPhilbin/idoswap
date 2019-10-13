@@ -44,7 +44,7 @@ class productSearch extends React.Component {
 			<div>
 				<div id="row justify-content-md-center">
 					<input
-					class='form-control'
+					className='form-control'
 					type='text'
 					size='40'
 					placeholder='Search products...'
