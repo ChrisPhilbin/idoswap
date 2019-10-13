@@ -20,7 +20,9 @@ export default class ProductForm extends React.Component {
 
 	onPriceChange = (e) => {
 		const price = e.target.value
+		if (price.match(/^\d*(\.\d{0,2})?$/)) {
 		this.setState(() => ({ price }))
+		}
 	}
 
 	render() {
