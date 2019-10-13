@@ -2,7 +2,8 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from '../components/NavBar'
 import MainPage from '../components/MainPage'
-// import AddProductPage from '../components/products/AddProductPage'
+import CategoryListPage from '../components/categories/CategoryListPage'
+import AddProductPage from '../components/products/AddProductPage'
 import AboutPage from '../components/AboutPage'
 import NotFoundPage from '../components/NotFoundPage'
 
@@ -12,6 +13,8 @@ const AppRouter = () => (
       <NavBar />
       <Switch>
       	<Route path="/" exact component={MainPage} />
+      	<Route page="/categories" component={CategoryListPage} />
+      	<Route page="/products/new" component={AddProductPage} />
         <Route path="/about" component={AboutPage} />
         <Route component={NotFoundPage} />
       </Switch>

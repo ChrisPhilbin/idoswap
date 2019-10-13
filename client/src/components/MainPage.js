@@ -5,7 +5,7 @@ import { getCategories } from '../actions/categoryActions'
 import IntroHeader from './IntroHeader'
 import ProductSearch from './products/ProductSearchForm'
 import ProductList from './products/ProductList'
-import CategoryList from './categories/CategoryList'
+// import CategoryList from './categories/CategoryList'
 class MainPage extends Component {
 
 	componentDidMount() {
@@ -25,10 +25,6 @@ class MainPage extends Component {
 				</div>
 
 				<div className="container">
-					<div className="row">
-						<CategoryList />
-					</div>
-
 					<div className="row">
 						<ProductList />
 					</div>

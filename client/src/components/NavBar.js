@@ -14,10 +14,10 @@ const NavBar = () => (
 	        <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
 	      </li>
 	      <li className="nav-item">
-	        <a className="nav-link" href="/">Sell a product</a>
+	        <a className="nav-link" href="/products/new">Sell a product</a>
 	      </li>
 	      <li className="nav-item">
-	        <a className="nav-link" href="/">Browse Categories</a>
+	      	<NavLink to="/categories" className="nav-link">Browse Categories</NavLink>
 	      </li>
 	      <li className="nav-item">
 	      	<NavLink to="/about" className="nav-link">About</NavLink>
