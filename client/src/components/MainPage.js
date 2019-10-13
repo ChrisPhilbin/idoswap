@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import NavBar from './components/NavBar'
-import { getProducts } from './actions/productActions'
-import { getCategories } from './actions/categoryActions'
-import IntroHeader from './components/IntroHeader'
-import ProductSearch from './components/products/ProductSearchForm'
-import ProductList from './components/products/ProductList'
-import CategoryList from './components/categories/CategoryList'
-class App extends Component {
+import NavBar from './NavBar'
+import { getProducts } from '../actions/productActions'
+import { getCategories } from '../actions/categoryActions'
+import IntroHeader from './IntroHeader'
+import ProductSearch from './products/ProductSearchForm'
+import ProductList from './products/ProductList'
+import CategoryList from './categories/CategoryList'
+class MainPage extends Component {
 
 	componentDidMount() {
 		this.props.getProducts()
@@ -17,7 +17,6 @@ class App extends Component {
   render() {
 	  return (
 	  	<div>
-	  		<NavBar />
 	  		<div class="container">
 	  			<IntroHeader />
 	  		</div>
@@ -46,4 +45,4 @@ const mapStateToProps = (state) => {
   	return state
 }
 
-export default connect(mapStateToProps, { getProducts, getCategories })(App);
+export default connect(mapStateToProps, { getProducts, getCategories })(MainPage);

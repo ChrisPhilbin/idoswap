@@ -11,6 +11,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import reducers from './reducers'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
+import AppRouter from './routers/AppRouter'
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(reducers, composeEnhancer(applyMiddleware(thunk)))
@@ -20,7 +21,7 @@ const store = createStore(reducers, composeEnhancer(applyMiddleware(thunk)))
 ReactDOM.render(
 
 	<Provider store={store}>
-		<App />
+		<AppRouter />
 	</Provider>, document.getElementById('root')
 	);
 
