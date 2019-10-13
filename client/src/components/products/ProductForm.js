@@ -27,15 +27,23 @@ export default class ProductForm extends React.Component {
 
 	render() {
 		return(
-			<div>
+			<div className="container">
 				<form>
-					<input type="text" name="name" placeholder="Name of product" autofocus value={this.state.name} onChange={this.onNameChange} />
+					<div className="form-group">
+						<label for="name">Name</label>
+						<input className="form-control" type="text" name="name" placeholder="Name of product" autofocus value={this.state.name} onChange={this.onNameChange} />
+					</div>
 
-					<textarea placeholder="Description of product" value={this.state.description} onChange={this.onDescriptionChange}></textarea>
+					<div className="form-group">
+						<label for="description">Description</label>
+						<textarea className="form-control" placeholder="Description of product" value={this.state.description} onChange={this.onDescriptionChange}></textarea>
+					</div>
 
-					<input type="number" name="price" placeholder="Initial asking price for item" value={this.state.price} onChange={this.onPriceChange} />
-
-					<button>Submit</button>
+					<div className="form-group">
+						<label for="price">Price</label>
+						<input className="form-control" type="number" name="price" placeholder="Initial asking price for item" value={this.state.price} onChange={this.onPriceChange} />
+					</div>
+						<button>Submit</button>
 				</form>
 			</div>
 		)
