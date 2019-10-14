@@ -31,20 +31,30 @@ export default class ProductForm extends React.Component {
 
 	onProductSubmit = (e) => {
 		e.preventDefault()
+		let url = 'http://localhost:3001/api/products/new'
+		let data = { product: this.state }
 
-    axios.post('/api/products/new', {product: this.state })
-    .then(response => {
-      const product = update(this.state, {
-        $splice: [[0, 0, response.data]]
-      })
-      this.setState({
-        product
-      })
-    })
-    .catch(error => console.log(error))      
+		let createProduct = {
+			method: 'POST',
+			body: data
+		}
+		fetch(url, createProduct)
+			.then(json => console.log(json))
+			.catch(error => console.log(error))
+	}
+
+    // axios.post('/api/products/new', {product: this.state })
+    // .then(response => {
+    // 	debugger;
+    //   const product = update(this.state, {
+    //     $splice: [[0, 0, response.data]]
+    //   })
+    //   this.setState({
+    //     product
+    //   })
+    // })
+    // .catch(error => console.log(error))      
  
-  	}
-
 	render() {
 		return(
 			<div className="container">
