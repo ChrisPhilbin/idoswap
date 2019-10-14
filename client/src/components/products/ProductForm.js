@@ -1,11 +1,15 @@
 import React from 'react'
+import axios from 'axios'
+import update from 'immutability-helper'
+
 
 export default class ProductForm extends React.Component {
 
 	state = {
 		name: '',
 		description: '',
-		price: ''
+		price: '',
+		user_id: '1'
 	}
 
 	onNameChange = (e) => {
@@ -25,6 +29,22 @@ export default class ProductForm extends React.Component {
 		}
 	}
 
+	onProductSubmit = (e) => {
+		e.preventDefault()
+
+    axios.post('/api/products/new', {product: this.state })
+    .then(response => {
+      const product = update(this.state, {
+        $splice: [[0, 0, response.data]]
+      })
+      this.setState({
+        product
+      })
+    })
+    .catch(error => console.log(error))      
+ 
+  	}
+
 	render() {
 		return(
 			<div className="container">
@@ -43,7 +63,7 @@ export default class ProductForm extends React.Component {
 						<label for="price">Price</label>
 						<input className="form-control" type="number" name="price" placeholder="Initial asking price for item" value={this.state.price} onChange={this.onPriceChange} />
 					</div>
-						<button>Submit</button>
+						<button onClick={this.onProductSubmit}>Submit</button>
 				</form>
 			</div>
 		)
