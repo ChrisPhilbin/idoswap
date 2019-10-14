@@ -5,7 +5,7 @@ import { getCategories } from '../actions/categoryActions'
 import IntroHeader from './IntroHeader'
 import ProductSearch from './products/ProductSearchForm'
 import ProductList from './products/ProductList'
-// import CategoryList from './categories/CategoryList'
+
 class MainPage extends Component {
 
 	componentDidMount() {

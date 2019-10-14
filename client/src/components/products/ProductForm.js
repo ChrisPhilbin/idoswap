@@ -1,6 +1,7 @@
 import React from 'react'
-import axios from 'axios'
-import update from 'immutability-helper'
+require("@rails/ujs").start()
+// import axios from 'axios'
+// import update from 'immutability-helper'
 
 
 export default class ProductForm extends React.Component {
@@ -9,7 +10,8 @@ export default class ProductForm extends React.Component {
 		name: '',
 		description: '',
 		price: '',
-		user_id: '1'
+		user_id: '1',
+		category_id: '1'
 	}
 
 	onNameChange = (e) => {
@@ -31,46 +33,36 @@ export default class ProductForm extends React.Component {
 
 	onProductSubmit = (e) => {
 		e.preventDefault()
-		let url = 'http://localhost:3001/api/products/new'
-		let data = { product: this.state }
+
+		let url = '/api/products'
+		let data = {product: this.state}
 
 		let createProduct = {
-			method: 'POST',
-			body: data
+			method: 'post',
+			body: JSON.stringify(data),
+			headers: {'Content-Type': 'application/json'}
 		}
 		fetch(url, createProduct)
 			.then(json => console.log(json))
 			.catch(error => console.log(error))
-	}
-
-    // axios.post('/api/products/new', {product: this.state })
-    // .then(response => {
-    // 	debugger;
-    //   const product = update(this.state, {
-    //     $splice: [[0, 0, response.data]]
-    //   })
-    //   this.setState({
-    //     product
-    //   })
-    // })
-    // .catch(error => console.log(error))      
+	}     
  
 	render() {
 		return(
 			<div className="container">
 				<form>
 					<div className="form-group">
-						<label for="name">Name</label>
-						<input className="form-control" type="text" name="name" placeholder="Name of product" autofocus value={this.state.name} onChange={this.onNameChange} />
+						<label>Name</label>
+						<input className="form-control" type="text" name="name" placeholder="Name of product" autoFocus value={this.state.name} onChange={this.onNameChange} />
 					</div>
 
 					<div className="form-group">
-						<label for="description">Description</label>
+						<label>Description</label>
 						<textarea className="form-control" placeholder="Description of product" value={this.state.description} onChange={this.onDescriptionChange}></textarea>
 					</div>
 
 					<div className="form-group">
-						<label for="price">Price</label>
+						<label>Price</label>
 						<input className="form-control" type="number" name="price" placeholder="Initial asking price for item" value={this.state.price} onChange={this.onPriceChange} />
 					</div>
 						<button onClick={this.onProductSubmit}>Submit</button>

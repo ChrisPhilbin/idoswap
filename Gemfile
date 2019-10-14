@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 gem 'devise', '~> 4.2'
 gem 'pry'
+gem 'pry-remote'
 gem 'webpacker'
 gem 'react-rails'
 gem 'foreman', '~> 0.82.0'

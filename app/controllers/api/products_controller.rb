@@ -27,8 +27,7 @@ class Api::ProductsController < ApplicationController
 
 	def create
 		product = Product.new(product_params)
-		product.save
-		render json: product
+		product.save ? (render json: product) : (render json: {errors: product.errors.full_messages})
 	end
 
 	def update
@@ -40,7 +39,7 @@ class Api::ProductsController < ApplicationController
 	private
 
 	def product_params
-		params.require(:product).permit(:name, :description, :price, :user_id)
+		params.require(:product).permit(:name, :description, :price, :user_id, :category_id)
 	end
 
 end
