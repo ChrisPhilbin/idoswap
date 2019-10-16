@@ -1,5 +1,6 @@
 import React from 'react';
 import searchClient from './SearchClient';
+import DisplayProducts from './ProductListItem'
 
 const MATCHING_ITEM_LIMIT = 25;
 
@@ -35,9 +36,8 @@ class productSearch extends React.Component {
 		const { products } = this.state;
 		const productRows = products.map((product, idx) => (
 			<div id={idx}>
-				<h3><b>{product.name.substring(0, 20)}</b></h3><br />
-				{product.description.substring(0, 40)}<br />
-				{product.price}
+				<DisplayProducts name={product.name} description={product.description}
+				price={product.price} created_at={product.created_at} />
 			</div>
 		));
 
@@ -62,17 +62,3 @@ class productSearch extends React.Component {
 }
 
 export default productSearch
-
-// const productRowsFormatted = (products) => {
-// 	let i = 0
-// 	while (i > products.length) {
-// 		products.slice(i, i+2).map((product, idx) => (
-// 			<div id={idx}>
-// 				<h3><b>{product.name.substring(0, 20)}</b></h3><br />
-// 				{product.description.substring(0, 40)}<br />
-// 				{product.price}
-// 			</div>
-// 		)
-// 	i++
-// 	}
-// }

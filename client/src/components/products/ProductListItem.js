@@ -1,11 +1,11 @@
 import React from 'react'
 
-const DisplayProducts = ({ description, name, price}) => (
+const DisplayProducts = ({ created_at, description, name, price}) => (
 	<div>
-		<p>
-		<h3><b>{name}</b></h3>
-		<p>{description}</p>
-		<span className="product-price">Asking price: {price}</span>
+		<span className="product-listed-date">{created_at}</span>
+		<span className="product-name-link">{name}</span>
+		<span className="product-description">{description} </span>
+		<span className="product-price">Asking price: ${price}</span>
 	</div>
 )
 export default DisplayProducts
