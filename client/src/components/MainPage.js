@@ -26,6 +26,8 @@ class MainPage extends Component {
 
 				<div className="container">
 					<div className="row">
+						<br />
+						<h4>Recently Added Items...</h4>
 						<ProductList />
 					</div>
 				</div>

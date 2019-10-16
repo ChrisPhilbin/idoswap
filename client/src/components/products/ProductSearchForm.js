@@ -55,7 +55,10 @@ class productSearch extends React.Component {
 					<br />
 				</div>
 
-				{productRows}
+				<div id="searchResults">
+					{productRows}
+				</div>
+				<br />
 			</div>
 		)
 	}
