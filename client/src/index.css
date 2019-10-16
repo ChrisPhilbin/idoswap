@@ -4,5 +4,23 @@
   min-height: 250px;
   color: #ffffff;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
+}
+.product-price {
+	border-radius: .25em;
+	border: 1px solid #ccc;
+	font-size: 12px;
+	padding: 1px, 3px;
+	font-family: "Arial",sans-serif;
+	border-top-color: rgb(204, 204, 204);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(204, 204, 204);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(204, 204, 204);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(204, 204, 204);
+    border-left-style: solid;
+    border-left-width: 1px;
 }
