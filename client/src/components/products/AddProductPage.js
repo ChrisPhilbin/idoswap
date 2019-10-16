@@ -3,7 +3,8 @@ import ProductForm from './ProductForm'
 
 const AddProductPage = () => (
 
-	<div>
+	<div class="container">
+		<br />
 		<h2>Add a new product</h2>
 		<ProductForm />
 	</div>

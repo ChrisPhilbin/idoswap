@@ -1,7 +1,5 @@
 import React from 'react'
-require("@rails/ujs").start()
-// import axios from 'axios'
-// import update from 'immutability-helper'
+import { Redirect } from 'react-router-dom';
 
 
 export default class ProductForm extends React.Component {
@@ -43,8 +41,9 @@ export default class ProductForm extends React.Component {
 			headers: {'Content-Type': 'application/json'}
 		}
 		fetch(url, createProduct)
-			.then(json => console.log(json))
-			.catch(error => console.log(error))
+			// .then
+			// .then(json => console.log(json))
+			// .catch(error => console.log(error))
 	}     
  
 	render() {

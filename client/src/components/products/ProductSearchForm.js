@@ -35,13 +35,14 @@ class productSearch extends React.Component {
 		const { products } = this.state;
 		const productRows = products.map((product, idx) => (
 			<div id={idx}>
-				<b>{product.name.substring(0, 20)}</b><br />
-				{product.description.substring(0, 40)}
+				<h3><b>{product.name.substring(0, 20)}</b></h3><br />
+				{product.description.substring(0, 40)}<br />
+				{product.price}
 			</div>
 		));
 
 		return (
-			<div>
+			<div class="container">
 				<div id="row justify-content-md-center">
 					<input
 					className='form-control'
@@ -51,6 +52,7 @@ class productSearch extends React.Component {
 					value={this.state.searchValue}
 					onChange={this.handleSearchChange}
 					/>
+					<br />
 				</div>
 
 				{productRows}
@@ -60,3 +62,17 @@ class productSearch extends React.Component {
 }
 
 export default productSearch
+
+// const productRowsFormatted = (products) => {
+// 	let i = 0
+// 	while (i > products.length) {
+// 		products.slice(i, i+2).map((product, idx) => (
+// 			<div id={idx}>
+// 				<h3><b>{product.name.substring(0, 20)}</b></h3><br />
+// 				{product.description.substring(0, 40)}<br />
+// 				{product.price}
+// 			</div>
+// 		)
+// 	i++
+// 	}
+// }
