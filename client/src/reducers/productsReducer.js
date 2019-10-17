@@ -12,6 +12,11 @@ const productsReducer = (state = { products: [], loading: false}, action) => {
 				products: state.products.concat(action.payload),
 				loading: false
 			}
+		case 'PRODUCT_CREATED':
+			return {
+				...state,
+				products: state.products.concat(action.payload)
+			}
 		default:
 			return state
 	}

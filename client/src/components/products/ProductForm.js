@@ -1,8 +1,9 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux'
+import { addProduct } from '../../actions/productActions'
 
-
-export default class ProductForm extends React.Component {
+class ProductForm extends React.Component {
 
 	state = {
 		name: '',
@@ -32,19 +33,12 @@ export default class ProductForm extends React.Component {
 	onProductSubmit = (e) => {
 		e.preventDefault()
 
-		let url = '/api/products'
-		let data = {product: this.state}
+		let formData = {product: this.state}
 
-		let createProduct = {
-			method: 'post',
-			body: JSON.stringify(data),
-			headers: {'Content-Type': 'application/json'}
-		}
-		fetch(url, createProduct)
-			// .then
-			// .then(json => console.log(json))
-			// .catch(error => console.log(error))
-	}     
+		this.props.addProduct(formData)
+
+		this.props.history.push("/")
+	}   
  
 	render() {
 		return(
@@ -70,3 +64,4 @@ export default class ProductForm extends React.Component {
 		)
 	}
 }
+export default connect(null, {addProduct})(ProductForm)

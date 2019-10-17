@@ -13,7 +13,7 @@ class Api::ProductsController < ApplicationController
 	end
 
 	def all
-		products = Product.all.take(30)
+		products = Product.all.take(30).reverse
 		render json: products
 	end
 
