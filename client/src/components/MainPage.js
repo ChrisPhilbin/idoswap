@@ -14,6 +14,7 @@ class MainPage extends Component {
 	}
 
   render() {
+  	console.log(3)
 	  return (
 	  	<div>
 	  		<div className="container">

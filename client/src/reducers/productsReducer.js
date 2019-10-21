@@ -1,5 +1,5 @@
 const productsReducer = (state = { products: [], loading: false}, action) => {
-
+	console.log(8)
 	switch (action.type) {
 		case 'LOADING_PRODUCTS':
 			return {
