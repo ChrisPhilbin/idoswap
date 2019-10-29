@@ -17,16 +17,6 @@ class ProductForm extends React.Component {
 		this.setState({[e.target.name]: e.target.value})
 	}
 
-	// onNameChange = (e) => {
-	// 	const name = e.target.value
-	// 	this.setState(() => ({ name }))
-	// }
-
-	// onDescriptionChange = (e) => {
-	// 	const description = e.target.value
-	// 	this.setState(() => ({ description }))
-	// }
-
 	onPriceChange = (e) => {
 		const price = e.target.value
 		if (price.match(/^\d*(\.\d{0,2})?$/)) {
@@ -37,12 +27,9 @@ class ProductForm extends React.Component {
 	onProductSubmit = (e) => {
 		e.preventDefault()
 
-		console.log(1)
-
 		let formData = {product: this.state}
 
 		this.props.addProduct(formData)
-		console.log(2)
 		this.props.history.push("/")
 	}   
  

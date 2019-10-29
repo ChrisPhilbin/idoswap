@@ -2,7 +2,6 @@ import React from 'react'
 import ProductForm from './ProductForm'
 
 const AddProductPage = (props) => {
-	console.log(4)
 	return(
 	<div class="container">
 		<br />

@@ -10,7 +10,6 @@ export const getProducts = () => {
 }
 
 export const addProduct = (data) => {
-	console.log(5)
 	return dispatch => {
 		let createProduct = {
 			method: 'post',
@@ -21,10 +20,8 @@ export const addProduct = (data) => {
 			fetch('/products', createProduct)
 			.then(resp => resp.json())
 			.then(product => {
-				console.log(6)
 				dispatch({type: 'PRODUCT_CREATED', payload: product})
 			})
 		)
 	}
-	console.log(7)
 }

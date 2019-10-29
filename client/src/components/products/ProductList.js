@@ -18,3 +18,5 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(ProductList)
+
+// export default ProductList
