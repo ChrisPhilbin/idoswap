@@ -13,9 +13,18 @@ class ProductForm extends React.Component {
 		category_id: '1'
 	}
 
-	onChange = (e) => {
-		this.setState({[e.target.name]: e.target.value})
-	}
+	// onChange(e) {
+
+	// 	this.setState({[e.target.name]: e.target.value})
+	// }
+	//WHENEVER we write functions that use the this keyword AND we pass them to another element as a callbac function
+	//it MUST be bound, either using an arrow function, or the bind function 
+	
+
+	 onChange = (e) => {
+		console.log(this)
+	 	this.setState({[e.target.name]: e.target.value})
+	 }
 
 	onPriceChange = (e) => {
 		const price = e.target.value
@@ -34,6 +43,8 @@ class ProductForm extends React.Component {
 	}   
  
 	render() {
+		console.log(this.props.boundAddProduct, "<< BAP from PROPS")
+		console.log(addProduct, "<< imported action creator")
 		return(
 			<div className="container">
 				<form>
@@ -57,4 +68,4 @@ class ProductForm extends React.Component {
 		)
 	}
 }
-export default connect(null, {addProduct})(ProductForm)
+export default connect(null, {boundAddProduct: addProduct})(ProductForm)
