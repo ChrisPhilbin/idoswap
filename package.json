@@ -6,10 +6,10 @@
   "repository": "https://github.com/ChrisPhilbin/idoswap.git",
   "author": "Chris Philbin",
   "license": "MIT",
-  "private": false
-}
-"scripts": {
+  "private": false,
+  "scripts": {
     "build": "cd client && yarn install && yarn build && cd ..",
     "deploy": "cp -a client/build/. public/",
     "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
+  }
 }
