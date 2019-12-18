@@ -9,8 +9,7 @@
   "private": false,
   "scripts": {
     "build": "cd client && yarn install && yarn build && cd ..",
-    "deploy": "cp -a client/build/. public/",
-    "heroku-postbuild": "webpack --config webpack.prod.js"
+    "deploy": "cp -a client/build/. public/"
   },
   "dependencies": {
     "@rails/webpacker": "^4.2.2"
