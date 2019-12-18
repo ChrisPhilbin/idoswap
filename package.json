@@ -1,0 +1,15 @@
+"scripts": {
+    "build": "cd client && yarn install && yarn build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
+  },
+{
+  "name": "i-do-swap",
+  "version": "1.0.0",
+  "description": "Platform to buy and sell used wedding decor",
+  "main": "index.js",
+  "repository": "https://github.com/ChrisPhilbin/idoswap.git",
+  "author": "Chris Philbin",
+  "license": "MIT",
+  "private": false
+}
